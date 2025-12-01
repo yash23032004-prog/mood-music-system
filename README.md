@@ -1,21 +1,32 @@
-# Mood-Based-Music Suggestion System
-A web application built using Node.js , Expresss.js, MySQL and EJS that recommends songs based on the user'selected mood.
+# Mood-Based Music Recommendation System
+
+A web application that recommends songs based on user mood using Node.js, Express, MySQL and EJS.
 
 ## Features
-- Mood-based song recommendations
-- User registration & login (bcrypt authentication)
-- MySQL database for songs &  moods
-- Clean and responsive UI(CSS + Bootstrap)
-- YouTube-based music playback
-## TECH STACK
-  - Node.js
-  - Express.js
-  - MySQL2
-  - EJS TEMPLATE ENGINE
-  - BOOTSTRAP 5
-## HOW TO RUN 
-1. CLONE THE REPO
-2. EUN 'npm install'
-3. IMPORET 'music_db.sql' into MYSQL
-4. RUN 'node app.js'
-5. Open 'http://locationhost:3000'
+- User registration & login with bcrypt password hashing
+- Mood selection and song suggestions (YouTube links)
+- MySQL database for users & songs
+- Simple responsive UI (Bootstrap + custom CSS)
+
+## Tech Stack
+Node.js, Express.js, MySQL, bcrypt, EJS, Bootstrap 5
+
+## Project Structure
+mood-music-system/
+┣ backend/ (server, routes, db)
+┣ frontend/ (views - ejs)
+┣ public/ (css, client assets)
+┗ database/ (schema.sql)
+
+## How to run (local)
+1. Install Node.js and MySQL.
+2. Import `database/schema.sql` into MySQL (use MySQL Workbench or command-line).
+3. Open terminal:
+   cd mood-music-system/backend
+   npm install
+   node app.js
+4. Open browser: `http://localhost:3000`
+5. Register a user → login → select mood → view songs.
+
+## Note
+- Edit `backend/db.js` to set your MySQL password if needed.
