@@ -1,0 +1,12 @@
+<%- include("layout") %>
+
+<form method="POST" action="/auth/login" class="mt-3">
+  <div class="mb-2">
+    <input name="username" class="form-control" placeholder="Username" required />
+  </div>
+  <div class="mb-2">
+    <input name="password" type="password" class="form-control" placeholder="Password" required />
+  </div>
+  <button class="btn btn-primary">Login</button>
+  <a href="/auth/register" class="btn btn-link">Register</a>
+</form>

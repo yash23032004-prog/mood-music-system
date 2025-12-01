@@ -1,0 +1,24 @@
+<%- include("layout") %>
+
+<h3>Songs for mood: <%= mood %></h3>
+
+<% if (!songs || songs.length === 0) { %>
+  <div class="card">No songs found for this mood.</div>
+<% } else { %>
+  <% songs.forEach(song => { %>
+    <div class="card">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h5><%= song.song_name %></h5>
+          <p class="text-muted"><strong>Mood:</strong> <%= song.mood %></p>
+        </div>
+        <div>
+          <!-- if stored as YouTube link, opened in new tab -->
+          <a class="btn btn-dark" href="<%= song.url %>" target="_blank" rel="noopener">Play ▶</a>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+<% } %>
+
+<a href="/home" class="btn btn-link mt-3">Back</a>

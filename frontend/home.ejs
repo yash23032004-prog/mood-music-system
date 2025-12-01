@@ -1,0 +1,15 @@
+<%- include("layout") %>
+
+<h3>Select Your Mood</h3>
+<form method="POST" action="/mood/songs">
+  <div class="mb-3">
+    <select name="mood" class="form-select" required>
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="calm">Calm</option>
+      <option value="energetic">Energetic</option>
+      <option value="romantic">Romantic</option>
+    </select>
+  </div>
+  <button class="btn btn-warning">Get Songs</button>
+</form>
